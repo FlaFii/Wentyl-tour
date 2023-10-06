@@ -1,0 +1,212 @@
+@use './colors' as *;
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+html {
+	scroll-padding-top: 74px;
+}
+
+body {
+	background-color: #333;
+	color: $white;
+	font-family: 'Montserrat', sans-serif;
+}
+
+.red-highlight {
+	color: $main-color;
+}
+.shadow-bg {
+	background-color: rgba(0, 0, 0, 0.8);
+	border-radius: 0 0 10px 10px;
+}
+.section-title {
+	text-align: center;
+	text-transform: uppercase;
+}
+.underline {
+	width: 60px;
+	height: 3px;
+	background-color: $main-color;
+	border-radius: 2px;
+	margin: 0 auto 40px;
+}
+nav  {
+	width: 100%;
+	text-transform: uppercase;
+	z-index: 1;
+	transition: 0.6s;
+	.navbar-brand:focus {
+		color: $white;
+	}
+	.nav-link,
+	.navbar-nav .nav-link.active,
+	.navbar-nav .nav-link.show,
+	.navbar-brand,
+	.fa-bars {
+		color: $white;
+	}
+	.nav-link:focus,
+	.nav-link:hover,
+	.navbar-nav .nav-link.active,
+	.navbar-nav .show > .nav-link {
+		color: $main-color;
+	}
+	.navbar-toggler {
+		padding: 10px 15px;
+	}
+	.navbar-brand {
+		font-weight: bold;
+	}
+
+	.navbar-brand:hover {
+		color: $main-color;
+	}
+}
+header.hero-img,
+.hero-img-aboutus {
+	position: relative;
+
+	color: $white;
+	height: 100vh;
+	background-size: cover;
+	background-position: center;
+	background-attachment: fixed;
+	background-image: url('../img/hero-bg-sm.jpg');
+	z-index: 0;
+	h1 {
+		text-transform: uppercase;
+	}
+
+	.hero-shadow {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background-color: rgb(0, 0, 0, 0.6);
+		z-index: -1;
+	}
+	.hero-text {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		height: 100%;
+	}
+	.fa-chevron-down {
+		position: absolute;
+		left: 50%;
+		transform: translateX(-50%);
+		bottom: 20px;
+		font-size: 30px;
+		color: $white;
+	}
+}
+main {
+	color: #000;
+}
+.aboutus {
+	i {
+		margin-top: 20px;
+		font-size: 30px;
+	}
+	.aboutus-card-title {
+		font-size: 18px;
+		text-transform: uppercase;
+	}
+	.aboutus-card-text {
+		font-size: 14px;
+		overflow: hidden;
+	}
+	.aboutus-hover {
+		transition: color 0.3s;
+		.aboutus-hero-title {
+			font-size: 16px;
+			text-transform: uppercase;
+			font-weight: bold;
+		}
+	}
+	.aboutus-hover:hover {
+		color: $main-color;
+	}
+}
+.offer {
+	position: relative;
+	color: $light-gray;
+	background-image: url('../img/about-hero-bg-sm.jpg');
+	background-size: cover;
+	background-position: center;
+	z-index: 1;
+
+	.offer-shadow {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background-color: rgba(0, 0, 0, 0.75);
+		z-index: -1;
+	}
+	.card-body {
+		text-align: center;
+		.btn-outline-info {
+			color: $main-color;
+			border-color: $main-color;
+			transition: all 0.3s;
+		}
+		.btn-outline-info:hover {
+			background-color: $main-color;
+			color: $white;
+		}
+	}
+
+	.card-title {
+		text-transform: uppercase;
+		font-size: 16px;
+		font-weight: bold;
+		letter-spacing: 2px;
+	}
+}
+.team {
+	color: $white;
+	.carousel-inner {
+		border-radius: 15px;
+	}
+	.carousel-caption {
+		left: 0;
+		width: 100%;
+		background-color: rgba(0, 0, 0, 0.8);
+	}
+}
+
+@media (min-width: 992px) {
+	html {
+		scroll-padding-top: 72px;
+	}
+}
+@media (min-width: 768px) {
+	.hero-text {
+		h1 {
+			font-size: 45px;
+		}
+		.hero-text-paragraph {
+			font-size: 20px;
+		}
+	}
+	.team{
+		.section-title{
+			font-size: 30px;
+		}
+	}
+}
+@media (min-width: 1200px) {
+	header.hero-img {
+		background-image: url('../img/hero-bg-xl.jpg');
+	}
+	section.aboutus-hero {
+		background-image: url('../img/about-hero-bg-xl.jpg');
+	}
+}
