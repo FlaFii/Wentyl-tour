@@ -1,0 +1,213 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-padding-top: 74px;
+}
+
+body {
+  background-color: #333;
+  color: #fff;
+  font-family: "Montserrat", sans-serif;
+}
+
+.red-highlight {
+  color: #ff035f;
+}
+
+.shadow-bg {
+  background-color: rgba(0, 0, 0, 0.8);
+  border-radius: 0 0 10px 10px;
+}
+
+.section-title {
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.underline {
+  width: 60px;
+  height: 3px;
+  background-color: #ff035f;
+  border-radius: 2px;
+  margin: 0 auto 40px;
+}
+
+nav {
+  width: 100%;
+  text-transform: uppercase;
+  z-index: 1;
+  transition: 0.6s;
+}
+nav .navbar-brand:focus {
+  color: #fff;
+}
+nav .nav-link,
+nav .navbar-nav .nav-link.active,
+nav .navbar-nav .nav-link.show,
+nav .navbar-brand,
+nav .fa-bars {
+  color: #fff;
+}
+nav .nav-link:focus,
+nav .nav-link:hover,
+nav .navbar-nav .nav-link.active,
+nav .navbar-nav .show > .nav-link {
+  color: #ff035f;
+}
+nav .navbar-toggler {
+  padding: 10px 15px;
+}
+nav .navbar-brand {
+  font-weight: bold;
+}
+nav .navbar-brand:hover {
+  color: #ff035f;
+}
+
+header.hero-img,
+.hero-img-aboutus {
+  position: relative;
+  color: #fff;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-image: url("../img/hero-bg-sm.jpg");
+  z-index: 0;
+}
+header.hero-img h1,
+.hero-img-aboutus h1 {
+  text-transform: uppercase;
+}
+header.hero-img .hero-shadow,
+.hero-img-aboutus .hero-shadow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: -1;
+}
+header.hero-img .hero-text,
+.hero-img-aboutus .hero-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+header.hero-img .fa-chevron-down,
+.hero-img-aboutus .fa-chevron-down {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 20px;
+  font-size: 30px;
+  color: #fff;
+}
+
+main {
+  color: #000;
+}
+
+.aboutus i {
+  margin-top: 20px;
+  font-size: 30px;
+}
+.aboutus .aboutus-card-title {
+  font-size: 18px;
+  text-transform: uppercase;
+}
+.aboutus .aboutus-card-text {
+  font-size: 14px;
+  overflow: hidden;
+}
+.aboutus .aboutus-hover {
+  transition: color 0.3s;
+}
+.aboutus .aboutus-hover .aboutus-hero-title {
+  font-size: 16px;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+.aboutus .aboutus-hover:hover {
+  color: #ff035f;
+}
+
+.offer {
+  position: relative;
+  color: #eae5e5;
+  background-image: url("../img/about-hero-bg-sm.jpg");
+  background-size: cover;
+  background-position: center;
+  z-index: 1;
+}
+.offer .offer-shadow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.75);
+  z-index: -1;
+}
+.offer .card-body {
+  text-align: center;
+}
+.offer .card-body .btn-outline-info {
+  color: #ff035f;
+  border-color: #ff035f;
+  transition: all 0.3s;
+}
+.offer .card-body .btn-outline-info:hover {
+  background-color: #ff035f;
+  color: #fff;
+}
+.offer .card-title {
+  text-transform: uppercase;
+  font-size: 16px;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+.team {
+  color: #fff;
+}
+.team .carousel-inner {
+  border-radius: 15px;
+}
+.team .carousel-caption {
+  left: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+@media (min-width: 992px) {
+  html {
+    scroll-padding-top: 72px;
+  }
+}
+@media (min-width: 768px) {
+  .hero-text h1 {
+    font-size: 45px;
+  }
+  .hero-text .hero-text-paragraph {
+    font-size: 20px;
+  }
+  .team .section-title {
+    font-size: 30px;
+  }
+}
+@media (min-width: 1200px) {
+  header.hero-img {
+    background-image: url("../img/hero-bg-xl.jpg");
+  }
+  section.aboutus-hero {
+    background-image: url("../img/about-hero-bg-xl.jpg");
+  }
+}/*# sourceMappingURL=style.css.map */
